@@ -6,176 +6,197 @@
 <title>Tanuj Manchem | Portfolio</title>
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 60px 20px;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
     background: #020617;
 }
 
-header h1 {
-    font-size: 42px;
-    margin: 0;
+nav h2 {
+    color: #38bdf8;
 }
 
-header p {
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 15px 0;
     font-size: 18px;
-    color: #94a3b8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 6px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* SECTION */
 section {
-    padding: 40px;
+    padding: 50px;
 }
 
 h2 {
     color: #38bdf8;
+    margin-bottom: 20px;
 }
 
-/* CARD */
+/* CARDS */
 .card {
     background: #1e293b;
     padding: 20px;
     margin: 15px 0;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
 }
 
-/* LINKS */
-a {
-    color: #38bdf8;
-    text-decoration: none;
+/* SKILLS GRID */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
-a:hover {
-    text-decoration: underline;
+.skill-box {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-    color: #94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>MANCHEM TANUJ</h1>
-    <p>Full Stack Developer | AI Enthusiast</p>
-    <a class="btn" href="https://github.com/tanuj-manchem" target="_blank">View GitHub</a>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h2>Tanuj</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-<section>
+<!-- HERO -->
+<div class="hero">
+    <h1>Hi, I'm <span>Tanuj Manchem</span></h1>
+    <p>Full Stack Developer (MERN) | AI & Generative AI Enthusiast</p>
+
+    <a class="btn" href="https://github.com/tanuj-manchem" target="_blank">GitHub</a>
+    <a class="btn" href="https://tanuj-manchem.github.io" target="_blank">Portfolio</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
-        B.Tech Electronics and Communication Engineering student graduating in 2027. 
-        Skilled in Python, JavaScript, SQL, and full-stack web development.
-        Built MERN Stack and Generative AI projects using React.js, Node.js, Express.js, MongoDB, and RAG systems.
+        B.Tech ECE student passionate about building scalable web applications and AI-powered solutions.
+        Experienced in MERN stack and Generative AI projects using RAG and modern APIs.
         </p>
     </div>
 </section>
 
+<!-- SKILLS -->
 <section>
     <h2>Technical Skills</h2>
-    <div class="card">
-        <ul>
-            <li><b>Languages:</b> Python, JavaScript, C, SQL</li>
-            <li><b>Frontend:</b> HTML5, CSS3, React.js</li>
-            <li><b>Backend:</b> Node.js, Express.js, REST APIs</li>
-            <li><b>Databases:</b> MongoDB, SQL</li>
-            <li><b>Core:</b> DSA, OOP, DBMS, Computer Networks</li>
-            <li><b>AI/ML:</b> Machine Learning, Deep Learning, Generative AI, RAG</li>
-            <li><b>Tools:</b> Git, GitHub, VS Code, Postman</li>
-        </ul>
+
+    <div class="skills">
+        <div class="skill-box">Python, JavaScript, C, SQL</div>
+        <div class="skill-box">React.js, HTML, CSS</div>
+        <div class="skill-box">Node.js, Express.js</div>
+        <div class="skill-box">MongoDB, SQL</div>
+        <div class="skill-box">DSA, OOP, DBMS</div>
+        <div class="skill-box">Machine Learning, Gen AI</div>
+        <div class="skill-box">Git, GitHub, Postman</div>
     </div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
-        <h3>NutriPlan AI – Smart Meal Planner</h3>
+        <h3>NutriPlan AI (Featured Project)</h3>
         <p>
-        AI-powered application that generates personalized meal plans using user preferences and pantry inputs.
-        Integrated Gemini AI and RAG-based retrieval for accurate nutrition recommendations.
+        AI-powered meal planner using Gemini API and RAG for personalized nutrition recommendations.
         </p>
-        <p><b>Tech Stack:</b> React.js, Node.js, MongoDB, Gemini AI, RAG</p>
-        <p>
-            🔗 <a href="https://nutriplan-ai-omega.vercel.app/" target="_blank">Live Demo</a> |
-            💻 <a href="https://github.com/tanuj-manchem" target="_blank">GitHub</a>
-        </p>
+        <p><b>Tech:</b> React, Node.js, MongoDB, AI</p>
+        <a href="https://nutriplan-ai-omega.vercel.app/" target="_blank">Live Demo</a>
     </div>
 
     <div class="card">
-        <h3>Parking Management System (MERN)</h3>
-        <p>
-        Full-stack web application for slot booking, vehicle management, and real-time availability.
-        </p>
-        <p><b>Tech Stack:</b> MongoDB, Express.js, React.js, Node.js</p>
+        <h3>Parking Management System</h3>
+        <p>MERN-based system for parking slot booking and management.</p>
     </div>
 
     <div class="card">
-        <h3>Coffee Machine Simulator (Python)</h3>
-        <p>
-        CLI-based application simulating coffee machine operations including payment and resource management.
-        </p>
+        <h3>Coffee Machine Simulator</h3>
+        <p>Python-based CLI application for automated beverage preparation.</p>
     </div>
 
 </section>
 
-<section>
-    <h2>Education</h2>
-    <div class="card">
-        <p><b>B.Tech ECE</b> – Sasi Institute of Technology and Engineering (2023–2027)</p>
-        <p>CGPA: 8.02</p>
-    </div>
-</section>
-
-<section>
-    <h2>Certifications</h2>
-    <div class="card">
-        <p>NPTEL – Introduction to Internet of Things (Elite + Silver, Score: 87%)</p>
-        <p>MERN Stack Development – PurpleLane</p>
-        <p>Generative AI – PurpleLane</p>
-    </div>
-</section>
-
-<section>
+<!-- CONTACT -->
+<section id="contact">
     <h2>Contact</h2>
     <div class="card">
         <p>Email: tanuj.manchem@sasi.ac.in</p>
-        <p>GitHub: <a href="https://github.com/tanuj-manchem">github.com/tanuj-manchem</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/tanuj-manchem-36241b288">View Profile</a></p>
+        <p>
+        GitHub: <a href="https://github.com/tanuj-manchem">tanuj-manchem</a>
+        </p>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Tanuj Manchem</p>
+    <p>© 2026 Tanuj Manchem | Built with ❤️</p>
 </footer>
 
 </body>
